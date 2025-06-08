@@ -33,6 +33,7 @@ if ( !isset( $_SESSION[ 'user_id' ] ) ) { require ( 'login_tools.php' ) ; load()
     <p>Use the navigation bar to explore the application.</p>
     <p>Use the navigation bar to explore the application.</p>
     <p>Use the navigation bar to explore the application.</p>
+</div>
 <?php
 include ('includes/footer.php');
 ?>	
