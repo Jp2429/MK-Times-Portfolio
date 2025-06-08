@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" 
    content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>CRUD Practice!</title>
+	<title>MK-Times</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" 
@@ -15,24 +15,35 @@
   
   </head>
   <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">MK-Times</a>
-  <button class="navbar-toggler" type="button" 
-    data-toggle="collapse" 
-    data-target="#navbarNav" 
-    aria-controls="navbarNav" 
-    aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="register.php">Create Account <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="login.php">Login</a>
-      </li>       
-    </ul>
-  </div>
-</nav>  
+    <div>       
+        <div class="container-fluid bg-dark text-white p-5 mb-4">
+            <!-- Not Needed for now, but can be used later for a logo.
+            <div class="row">
+                <div class="col text-center">
+                    <img src="images/logo.png" alt="MK-Times Logo" class="img-fluid" style="max-width: 150px;">
+                </div>
+            </div>
+             -->
+        <div class="row">
+            <div class="col text-center">
+                <h1 class="display-4">MK-Times</h1>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark flex-sm-row sticky-top" style="margin-top:-30px;">
+        <div class="container-fluid w-100 p-0">
+            <div class="row w-100 flex-column">
+                <div class="col-12 d-flex justify-content-center mt-0 pt-0">
+                    <ul class="navbar-nav mx-auto flex-row" style="font-size: 1.2rem; padding: 0 20px; padding-bottom: 20px;">
+                        <li class="nav-item active mr-4">
+                            <a class="nav-link" href="register.php">Register <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item ml-4">
+                            <a class="nav-link" href="login.php">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav> 
 

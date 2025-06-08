@@ -101,7 +101,7 @@
         }  
     }
 ?>
-<div class="container" style="padding: 20px;">
+<div class="container" style="padding: 40px;">
     <div class="row">
         <div class="col-sm">
             <div class="card bg-light mb-3">
@@ -160,10 +160,10 @@
                         </form><!-- closing form -->
                     </div><!-- closing card header -->
                 </div><!-- closing card -->
-            </div><!-- closing -->
+            </div><!-- closing col-sm -->
         </div><!-- closing row -->
-    </div><!-- closing container-->
-</form><!-- closing form -->
+    </div><!-- closing container -->
+    </div><!-- closing container -->
 <?php
 include ('includes/footer.php');
-?>	
+?>

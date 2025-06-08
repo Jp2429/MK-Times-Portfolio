@@ -1,10 +1,16 @@
 
-  <footer class="py-5 bg-dark fixed-bottom">
+  <footer class="py-5 bg-dark sticky-bottom" style="margin-top: 20px;">
+    <div class="container">
+      <p class="m-0 text-center text-white">© 2023 MK-Times. All rights reserved.</p>
     <div class="row">
+      <div class="col-md-4 mb-3">
+        <h5 class="text-white">Contact Us</h5>
+        <p class="text-muted">Email: noexistantemail@email.com</p>
       <div class="col-md-4 mb-3">
         <h5 class="text-white">About Us</h5>
         <p class="text-muted">We are a small team dedicated to providing the best products and services to our customers. Our mission is to deliver quality and value in everything we do.</p>
       </div>
+  </div>
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" 
 integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 

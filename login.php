@@ -10,7 +10,7 @@ if ( isset( $errors ) && !empty( $errors ) )
 ?>
 
 <!-- Display body section. -->
-<div class="container" style="padding: 20px;">
+<div class="container" style="padding: 40px;">
 <div class="row">
  <div class="col-sm">
    <div class="card bg-light mb-3">
