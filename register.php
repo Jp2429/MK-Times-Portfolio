@@ -164,3 +164,6 @@
         </div><!-- closing row -->
     </div><!-- closing container-->
 </form><!-- closing form -->
+<?php
+include ('includes/footer.php');
+?>	
