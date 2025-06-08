@@ -1,5 +1,5 @@
 <?php 
-include ( 'include/nav.html' ) ;
+include ( 'includes/nav.php' ) ;
 # Display any error messages if present.
 if ( isset( $errors ) && !empty( $errors ) )
 {
