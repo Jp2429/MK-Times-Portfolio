@@ -10,12 +10,12 @@ if ( isset( $errors ) && !empty( $errors ) )
 ?>
 
 <!-- Display body section. -->
-<div class="container">
+<div class="container" style="padding: 20px;">
 <div class="row">
  <div class="col-sm">
    <div class="card bg-light mb-3">
-	<div class="card-header"><h1>Login</h1>
-     <div class="card-body">
+	<div class="card-header"><h1>Login</h1></div>
+	<div class="card-body">
 	  <form action="login_action.php" method="post">
 		<div class="form-group">
 		<label for="inputemail">Email</label>
@@ -30,17 +30,17 @@ if ( isset( $errors ) && !empty( $errors ) )
 		       name="pass"  
 			   class="form-control" 
 			   required 
-			   placeholder="* Enter Password"></p>
+			   placeholder="* Enter Password">
 		</div>
 		<input type="submit" 
 		       class="btn btn-dark btn-lg btn-block" 
 			   value="Login">
-	 </div><!-- closing card header -->
+	 </form>
+	</div><!-- closing card-body -->
 	</div><!-- closing card -->
-   </div><!-- closing -->
+   </div><!-- closing col-sm -->
   </div><!-- closing row -->
- </div><!-- closing container-->
-</form><!-- closing form -->
+</div><!-- closing container -->
 <?php
 include ('includes/footer.php');
-?>	
+?>

@@ -101,7 +101,7 @@
         }  
     }
 ?>
-<div class="container">
+<div class="container" style="padding: 20px;">
     <div class="row">
         <div class="col-sm">
             <div class="card bg-light mb-3">
