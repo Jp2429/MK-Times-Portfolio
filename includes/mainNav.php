@@ -50,11 +50,11 @@
                     </ul>
                 </div>
                 <div class="col-12 d-flex justify-content-center mt-0 pt-0">
-                    <ul class="navbar-nav mx-auto" style="font-size: 1.2rem; padding: 0 20px; padding-bottom: 20px;">
-                        <li class="nav-item active">
+                    <ul class="navbar-nav mx-auto flex-row" style="font-size: 1.2rem; padding: 0 20px; padding-bottom: 20px;">
+                        <li class="nav-item active mr-4">
                             <a class="nav-link" href="home.php">Home <span class="sr-only">(current)</span></a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item ml-4">
                             <a class="nav-link" href="products.php">Products</a>
                         </li>
                     </ul>
