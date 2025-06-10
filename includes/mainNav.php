@@ -40,7 +40,9 @@
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
-                                My Account
+                                <?php
+		                            echo "{$_SESSION['first_name']} {$_SESSION['last_name']}";
+		                        ?>
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <li><a class="dropdown-item" href="cart.php">Cart</a></li>

@@ -28,7 +28,7 @@
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item"><p class="text-center">&pound' . $row['item_price'] . '</p></li>
-                    <li class="list-group-item btn btn-dark"><a class="btn btn-dark btn-lg btn-block" href="cart.php?id='.$row['item_id'].'">  Add to Cart</a> </li>
+                    <li class="list-group-item btn btn-dark"><a class="btn btn-dark btn-lg btn-block" href="added.php?id='.$row['item_id'].'">  Add to Cart</a> </li>
                 </ul>
             </div>
         </div>';
