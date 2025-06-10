@@ -1,3 +1,8 @@
+<style>
+  .container {
+	margin-top: 20px;
+  }
+</style>
 <?php # DISPLAY CHECKOUT PAGE.
 include ('includes/session-cart.php');
 
@@ -38,18 +43,23 @@ if ( isset( $_GET['total'] ) && ( $_GET['total'] > 0 ) && (!empty($_SESSION['car
 					<span aria-hidden=\"true\">&times;</span>
 				</button>Thanks for your order. Your Order Number Is #".$order_id."</p>
 			</div>
-		</div>";
+		</div>
+    </div>";
 
   # Remove cart items.  
   $_SESSION['cart'] = NULL ;
 }
 # Or display a message.
-else { echo '<div class=\"container\">
+else { echo "<div class=\"container\">
 			<div class=\"alert alert-secondary\" role=\"alert\">
 				<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
 					<span aria-hidden=\"true\">&times;</span>
 				</button>
 				<p>There are no items in your cart.</p>
 				</div>
-			</div>' ; }
+			</div>
+      </div>" ; }
+
+# Display footer section.
+include ('includes/footer.php');
 ?>

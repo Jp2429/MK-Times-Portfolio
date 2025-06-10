@@ -1,8 +1,12 @@
+<style>
+  .container {
+	margin-top: 20px;
+  }
+</style>
 <?php
 
 # Set page title and display header section.
 include ('includes/session-cart.php');
-
 # Get passed product id and assign it to a variable.
 if ( isset( $_GET['id'] ) ) $id = $_GET['id'] ; 
 
@@ -22,29 +26,31 @@ if ( mysqli_num_rows( $r ) == 1 )
     # Add one more of this product.
     $_SESSION['cart'][$id]['quantity']++; 
     echo '
-	<div class="container">
-			<div class="alert alert-secondary" role="alert">
-				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-				<p>Another '.$row["item_name"].' has been added to your cart</p>
-				<a href="home.php">Continue Shopping</a> | <a href="cart.php">View Your Cart</a>
-			</div>
-		</div>';
+    <div class="container">
+      <div class="alert alert-secondary" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <p>Another '.$row["item_name"].' has been added to your cart</p>
+        <a href="home.php">Continue Shopping</a> | <a href="cart.php">View Your Cart</a>
+      </div>
+    </div>
+	</div>';
   } 
   else
   {
     # Or add one of this product to the cart.
     $_SESSION['cart'][$id]= array ( 'quantity' => 1, 'price' => $row['item_price'] ) ;
     echo '<div class="container">
-			<div class="alert alert-secondary" role="alert">
-				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-				<p>A '.$row["item_name"].' has been added to your cart</p>
-			<a href="home.php">Continue Shopping</a> | <a href="cart.php">View Your Cart</a>
-			</div>
-		</div>' ;
+      <div class="alert alert-secondary" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <p>A '.$row["item_name"].' has been added to your cart</p>
+        <a href="home.php">Continue Shopping</a> | <a href="cart.php">View Your Cart</a>
+      </div>
+    </div>
+	</div>' ;
   }
 }
 

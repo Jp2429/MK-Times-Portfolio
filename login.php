@@ -1,3 +1,27 @@
+<style>
+	.container {
+		margin: 50px;
+		min-height: 10vh;
+		
+        color: white !important;
+	}
+	.card-header{
+		background-color:rgb(24, 24, 25) !important;
+        color: white !important;
+	}
+	.card-body{
+		background-color:rgb(24, 24, 25) !important;
+        color: white !important;
+	}
+	.card{
+		background-color:rgb(24, 24, 25) !important;
+		color: white !important;
+	}
+	.btn {
+        background-color:rgb(24, 24, 25) !important;
+        color: white !important;
+    }
+</style>
 <?php 
 include ( 'includes/nav.php' ) ;
 # Display any error messages if present.
@@ -10,10 +34,10 @@ if ( isset( $errors ) && !empty( $errors ) )
 ?>
 
 <!-- Display body section. -->
-<div class="container" style="padding: 40px;">
-<div class="row">
- <div class="col-sm">
-   <div class="card bg-light mb-3">
+<div class="container " style="padding: 40px;">
+<div class="row ">
+ <div class="col-sm ">
+   <div class="card bg mb-3 shadow p-3 mb-5 rounded border border-white">
 	<div class="card-header"><h1>Login</h1></div>
 	<div class="card-body">
 	  <form action="login_action.php" method="post">
@@ -33,13 +57,14 @@ if ( isset( $errors ) && !empty( $errors ) )
 			   placeholder="* Enter Password">
 		</div>
 		<input type="submit" 
-		       class="btn btn-dark btn-lg btn-block" 
+		       class="btn btn-dark btn-lg btn-block border border-white" 
 			   value="Login">
 	 </form>
 	</div><!-- closing card-body -->
 	</div><!-- closing card -->
    </div><!-- closing col-sm -->
   </div><!-- closing row -->
+</div>
 </div><!-- closing container -->
 <?php
 include ('includes/footer.php');

@@ -33,3 +33,27 @@ CREATE TABLE IF NOT EXISTS order_contents (
   price decimal(8,2) NOT NULL,
   PRIMARY KEY (content_id)
 )  ;
+
+SELECT p.*
+FROM orders o
+JOIN order_contents oc ON o.order_id = oc.order_id
+JOIN products p ON oc.item_id = p.item_id
+WHERE o.user_id = :user_id;
+
+INSERT INTO products (item_name, item_desc, item_img, item_price)
+VALUES
+('Astra Chrono', 'A timeless fusion of elegance and precision. The Astra Chrono features a stainless steel body with a midnight-blue dial and luminous hands — perfect for the modern professional.', 'img/watch3.jpg', 249.99),
+
+('Regalia Phantom', 'A bold statement piece crafted for those who lead. With its black matte finish and minimalist face, the Regalia Phantom balances mystery and sophistication effortlessly.', 'img/watch4.jpg', 299.99),
+
+('Solstice Gold', 'Shine with every second. Solstice Gold boasts a radiant gold-plated case and a white sunburst dial, ideal for evening wear or upscale events.', 'img/watch5.jpg', 349.99),
+
+('Horizon Steel', 'Built for everyday excellence. Horizon Steel blends rugged durability with sleek design, featuring a brushed metal band and sapphire glass for ultimate wear resistance.', 'img/watch6.jpg', 199.99),
+
+('Noir Eclipse', 'A monochrome masterpiece. The Noir Eclipse offers an all-black aesthetic with subtle silver detailing, embodying stealth and luxury in a single timepiece.', 'img/watch7.jpg', 229.99),
+
+('Terra Classic', 'Inspired by heritage, designed for now. Terra Classic features a leather strap, roman numeral dial, and warm tones to suit those who admire vintage charm.', 'img/watch8.jpg', 189.99),
+
+('Velox S', 'Performance meets style. Velox S is a chronograph watch with stopwatch functionality and a bold red second hand — made for adventurers and athletes alike.', 'img/watch9.jpg', 269.99),
+
+('Luna Mariner', 'Elegant and sea-ready. Luna Mariner offers water resistance up to 100 meters with a wave-patterned blue dial, making it ideal for yachting or beachside soirées.', 'img/watch10.jpg', 319.99);

@@ -12,25 +12,52 @@
     href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" 
     integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
     crossorigin="anonymous">
-  
+    <style>
+        body {
+            background-color: #FFF9E5;
+            font-family: 'Lucida Console', monospace;
+        }
+        .logo-img {
+            width: auto;
+            max-width: none;
+            height: 350px;
+            object-fit: contain;
+            padding: 0;
+            margin: 0 auto;
+            display: block;
+        }
+        .navbar{
+            background-color:rgb(24, 24, 25) !important;
+        }
+        .container-fluid{
+            background-color:rgb(24, 24, 25) !important;
+
+        }
+    </style>
   </head>
   <body>
     <div>       
-        <div class="container-fluid bg-dark text-white p-5 mb-4">
-            <!-- Not Needed for now, but can be used later for a logo.
+        <div class="container-fluid bg-dark text-white p-5 mb-4" style="margin-top: -30px; height: 300px;">
+            <div class="col text-center">
+                    <img src="img/logo.png" alt="MK-Times Logo" class="logo-img">
+            </div>
+            <!--
             <div class="row">
                 <div class="col text-center">
-                    <img src="images/logo.png" alt="MK-Times Logo" class="img-fluid" style="max-width: 150px;">
+                    <img src="img/logo2.png" alt="MK-Times Logo" class="logo-img">
                 </div>
             </div>
-             -->
+             !-->
+             <!-- Not Needed for now, but can be used later for a logo.
         <div class="row">
             <div class="col text-center">
                 <h1 class="display-4">MK-Times</h1>
             </div>
+
         </div>
+        -->
     </div>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark flex-sm-row sticky-top" style="margin-top:-30px;">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark flex-sm-row sticky-top shadow p-3 mb-5 bg-white" style="margin-top:-30px;">
         <div class="container-fluid w-100 p-0">
             <div class="row w-100 flex-column">
                 <div class="col-12 d-flex justify-content-end align-items-center" style="font-size: 0.9rem;">

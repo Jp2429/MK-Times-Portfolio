@@ -1,3 +1,27 @@
+<style>
+	.container {
+		margin: 50px;
+		min-height: 10vh;
+		
+        color: white !important;
+	}
+	.card-header{
+		background-color:rgb(24, 24, 25) !important;
+        color: white !important;
+	}
+	.card-body{
+		background-color:rgb(24, 24, 25) !important;
+        color: white !important;
+	}
+	.card{
+		background-color:rgb(24, 24, 25) !important;
+		color: white !important;
+	}
+	.btn {
+        background-color:rgb(24, 24, 25) !important;
+        color: white !important;
+    }
+</style>
 <?php 
     include ( 'includes/nav.php' ) ; 
 
