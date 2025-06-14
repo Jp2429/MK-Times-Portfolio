@@ -50,7 +50,7 @@
                 </div>
                 <div class="col-md-5 col-lg-5 col-xl-5">
                   <h6 class="text-muted">Product</h6>
-                  <h6 class="text-black mb-0">' . $row['item_name'] . '</h6>
+                  <h6 class="text-black mb-0" data-cy="itemName">' . $row['item_name'] . '</h6>
                   <p class="text-muted small">' . $row['item_desc'] . '</p>
                 </div>
                 
