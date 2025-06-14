@@ -42,6 +42,10 @@ WHERE o.user_id = :user_id;
 
 INSERT INTO products (item_name, item_desc, item_img, item_price)
 VALUES
+('MKTimes Ocean Sovereign','The Ocean Sovereign is a timeless tribute to maritime precision and prestige. Featuring a polished stainless steel case, black ceramic unidirectional bezel, and luminous hour markers, this luxury diver’s watch combines rugged functionality with boardroom-worthy style. Its 300m water resistance and date complication make it ideal for both adventurous pursuits and formal occasions.', 'img/watch.jpg', 143.99),
+
+('MKTimes Chrono Eclipse','The Chrono Eclipse is the embodiment of bold sophistication, designed for the modern professional. Its sleek tachymeter bezel encircles a jet-black dial with three precision chronograph sub-dials, offering style and performance in perfect harmony. The brushed steel bracelet and subtle luminescence deliver understated luxury, whether you are timing laps or leading meetings.', 'img/watch2.jpg', 109.99),
+
 ('Astra Chrono', 'A timeless fusion of elegance and precision. The Astra Chrono features a stainless steel body with a midnight-blue dial and luminous hands — perfect for the modern professional.', 'img/watch3.jpg', 249.99),
 
 ('Regalia Phantom', 'A bold statement piece crafted for those who lead. With its black matte finish and minimalist face, the Regalia Phantom balances mystery and sophistication effortlessly.', 'img/watch4.jpg', 299.99),
