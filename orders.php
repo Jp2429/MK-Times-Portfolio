@@ -2,6 +2,20 @@
   .container {
 	margin-top: 20px;
     min-height: 10vh;
+    
+  }
+  .row{
+    background-color:rgb(24, 24, 25) !important;
+    color: white !important;
+  }
+  #order-row:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s;
+    transform: scale(1.1);
+  }
+  .col{
+    background-color:rgb(24, 24, 25) !important;
+    color: white !important;
   }
 </style>
 <?php
@@ -16,48 +30,56 @@
     # Open database connection.
     require ( 'connect_db.php' ) ;
     # Retrieve items from 'shop' database table.
-    $q = "SELECT p.*
+    $q = "SELECT o.order_id, o.order_date,p.item_img, p.item_name, p.item_desc, oc.quantity, p.item_price AS price
         FROM orders o
         JOIN order_contents oc ON o.order_id = oc.order_id
         JOIN products p ON oc.item_id = p.item_id
         WHERE o.user_id = $_SESSION[user_id];" ;
     $r = mysqli_query( $link, $q ) ;
+    # Display body section.
     if ( mysqli_num_rows( $r ) > 0 )
     {
-    # Display body section.
-    echo '<div class="container">
-        <div class="row" style="margin-top: 20px; width: 100%;">';
-    while ( $row = mysqli_fetch_array( $r, MYSQLI_ASSOC ))
+    echo '<div class="container mt-5">
+            <h1 class="mb-4">Your Orders</h1>';
+    while ( $row = mysqli_fetch_assoc( $r ))
     {
-    echo '
-        <div class="col-md-4 d-flex justify-content-center">
-            <div class="card shadow p-3 mb-5 bg-body rounded" style="width: 25rem; min-width: 20rem;">
-                <img src="'. $row['item_img'].'" class="card-img-top" alt="T-Shirt">
-                <div class="card-body">
-                    <h5 class="card-title text-center">' . $row['item_name'] .'</h5>
-                    <p class="card-text">'. $row['item_desc'] . '</p>
+        $subtotal = $row['price'] * $row['quantity'];
+        echo '<div class="row mb-4 d-flex justify-content-between align-items-center rounded shadow p-3" id="order-row">
+                <div class="col-md-2 col-lg-2 col-xl-2 text-center">
+                  <img src="' . $row['item_img'] . '" alt="' . htmlspecialchars($row['item_name']) . '" class="img-fluid rounded-3" style="max-width: 150px; max-height: 150px;">
                 </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><p class="text-center">&pound' . $row['item_price'] . '</p></li>
-                    <li class="list-group-item btn btn-dark"><a class="btn btn-dark btn-lg btn-block" href="added.php?id='.$row['item_id'].'">  Add to Cart</a> </li>
-                </ul>
-            </div>
-        </div>';
+                <div class="col-md-5 col-lg-5 col-xl-5">
+                  <h6 class="text-muted">Product</h6>
+                  <h6 class="text-black mb-0">' . $row['item_name'] . '</h6>
+                  <p class="text-muted small">' . $row['item_desc'] . '</p>
+                </div>
+                
+                <div class="col-md-5 col-lg-5 col-xl-5 text-center">
+                    <div class="d-flex justify-content-center align-items-center mb-3" style="column-gap: 5.5rem;">
+                        <div>
+                            <h6 class="mb-1 mt-3">Order Date</h6>
+                            <h6 class="mb-0 text-muted">' . date('d M Y', strtotime($row['order_date'])) . '</h6>
+                        </div>
+                        <div>
+                            <h6 class="mb-1 mt-3">Quantity</h6>
+                            <h6 class="mb-0 text-muted">' . $row['quantity'] . '</h6>
+                            <h6 class="mb-1 mt-3">Price</h6>
+                            <h6 class="mb-0 text-muted">&pound;' . number_format($row['price'], 2) . '</h6>
+                            <h6 class="mb-1 mt-3">Subtotal</h6>
+                            <h6 class="mb-0 text-muted">&pound;' . number_format($subtotal, 2) . '</h6>
+                        </div>
+                    </div>
+                </div>
+                
+              </div>';
     }
-    echo '</div></div>';
+    echo '      </div>' ;
     # Close database connection.
     mysqli_close( $link ) ; 
     }
     # Or display message.
-    else { echo '<div class="container">
-                    <div class="alert alert-secondary" role="alert">
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                        </button>
-                        <p>You do not have any previous orders.</p>
-                        <a href="products.php">View our Products</a> | <a href="cart.php">View Your Cart</a>
-                    </div>
-                </div>
+    else { echo '<div class="container mt-5">
+                    <div class="alert alert-info">You have no orders yet.</div>
                 </div>' ; }
     include ('includes/footer.php');
 

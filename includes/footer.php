@@ -23,7 +23,7 @@
         </div>
         <div class="row">
             <div class="col-12">
-                <p class="m-0 text-center text-white">© 2023 MK-Times. All rights reserved.</p>
+                <p class="m-0 text-center text-white">© 2025 MK-Times. All rights reserved.</p>
             </div>
         </div>
     </div>

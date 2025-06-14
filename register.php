@@ -90,13 +90,13 @@
             $r = @mysqli_query ( $link, $q ) ;
             if ($r)
             {
-                echo '<div class"container">
-                      <div class="alert alert secondary" role="alert">
+                echo '<div class="alert alert-secondary text-align center" role="alert" style="margin: 20px;">
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                           <span aria-hidden="true">&times;</span>
                           </button>
                         <h4 class="alert-heading">Thank you for registering!</h4>
                         <a class="alert-link" href="login.php">Login</a>
+                    </div>
                     </div>';
             }
             # Close database connection.
@@ -106,20 +106,23 @@
         # Or report errors.
         else 
         {
-            echo '<div class"container">
-                      <div class="alert alert secondary" role="alert">
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                        <h4 class="alert-heading" id="err_msg">The following error(s) occurred:</h4>  
-                    </div>';
+            echo '<div class="alert alert-secondary text-align center" role="alert" style="margin: 20px;">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<p id="err_msg">Oops! There was a problem:<br>' ;
+ 				foreach ( $errors as $msg )
+                {
+                    echo " - $msg<br>" ; 
+                }
+            echo '<p>or please try again.</p></div>;
+				</div>
+		        </div>'
+            
+                
             
              ;
-            foreach ( $errors as $msg )
-            {
-                echo " - $msg<br>" ; 
-            }
-            echo '<p>or please try again.</p></div>';
+            
             # Close database connection.
             mysqli_close( $link );
         }  

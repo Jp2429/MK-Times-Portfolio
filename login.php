@@ -27,9 +27,16 @@ include ( 'includes/nav.php' ) ;
 # Display any error messages if present.
 if ( isset( $errors ) && !empty( $errors ) )
 {
- echo '<p id="err_msg">Oops! There was a problem:<br>' ;
- foreach ( $errors as $msg ) { echo " - $msg<br>" ; }
- echo 'Please try again or <a href="register.php">Register</a></p>' ;
+ echo '<div class="alert alert-secondary text-align center" role="alert" style="margin: 20px;">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<p id="err_msg">Oops! There was a problem:<br>' ;
+ 				foreach ( $errors as $msg ) { echo " - $msg<br>" ; }
+ 				echo 'Please try again or <a href="register.php">Register</a></p>
+				</div>
+		</div>' ;
+  
 }
 ?>
 

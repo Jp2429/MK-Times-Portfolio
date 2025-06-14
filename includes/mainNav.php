@@ -20,7 +20,7 @@
         .logo-img {
             width: auto;
             max-width: none;
-            height: 350px;
+            height: 300px;
             object-fit: contain;
             padding: 0;
             margin: 0 auto;
@@ -37,9 +37,9 @@
   </head>
   <body>
     <div>       
-        <div class="container-fluid bg-dark text-white p-5 mb-4" style="margin-top: -30px; height: 300px;">
+        <div class="container-fluid bg-dark text-white p-5 mb-4" style="margin-top: -30px; height: 320px;">
             <div class="col text-center">
-                    <img src="img/logo.png" alt="MK-Times Logo" class="logo-img">
+                    <img src="img/logoClock.png" alt="MK-Times Logo" class="logo-img">
             </div>
             <!--
             <div class="row">
